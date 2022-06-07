@@ -9,27 +9,46 @@ import org.jointheleague.graphical.robot.Robot;
 public class _02_RobotRace {
     // 1. make a main method
 public static void main(String[] args) {
-	Robot[] robo = new Robot[5];
+	Robot[] robo = new Robot[10];
 
 for(int i = 0; i < robo.length; i++) {
 	robo[i] = new Robot();
+	robo[i].setY(460);
+	robo[i].setSpeed(10);
 }
+robo[0].setX(100);
+robo[1].setX(200);
+robo[2].setX(300);
+robo[3].setX(400);
+robo[4].setX(500);
+robo[5].setX(600);
+robo[6].setX(650);
+robo[7].setX(700);
+robo[8].setX(750);
+robo[9].setX(800);
 
-Random E = new Random();
-for(int i = 0; i < robo.length; i++) {
-	robo[i].setX(0);
-	robo[i].setY(500);
-	//robo[i].move(E.nextInt(50));
-
-}
-     
 int i = 0;
-
-while(robo[i].getY()< 0) {
-	robo[i].move(E.nextInt(50));
-	
+Random E = new Random();
+while(robo[i].getY()>30) {
+	robo[0].move(E.nextInt(50));
+	robo[1].move(E.nextInt(50));
+	robo[2].move(E.nextInt(50));
+	robo[3].move(E.nextInt(50));
+	robo[4].move(E.nextInt(50));
+	robo[5].move(E.nextInt(50));
+	robo[6].move(E.nextInt(50));
+	robo[7].move(E.nextInt(50));
+	robo[8].move(E.nextInt(50));
+	robo[9].move(E.nextInt(50));
+}
+for(int e = 0; e < robo.length;e++) {
+	int f = robo[e].getY();
+	if(f < 30) {
+		System.out.println(f+" is the winner");
+	}
 }
 
+     
 // 2. create an array of 5 robots.
 
         // 3. use a for loop to initialize the robots.
