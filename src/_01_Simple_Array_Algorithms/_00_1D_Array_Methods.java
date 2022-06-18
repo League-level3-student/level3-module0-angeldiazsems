@@ -40,10 +40,9 @@ public class _00_1D_Array_Methods {
     	for(int i = 0; i < array.length;i++) {
     		if(array[i] == value) {
     			return true;
-    	}
-    		else {
-    			return false;
     		}
+    	}
+		return false;
     	
     }
 
@@ -53,7 +52,13 @@ public class _00_1D_Array_Methods {
     //   first instance that the specified value occurs in the array.
     //   If the array does not contain the specified value, it should return -1.
     public static int getIndex(int[] arr, int value) {
-
-        return 0;
+    	
+    		for(int i = 0;i < arr.length; i++) {
+    			if(arr[i] == value) {
+    				
+    			
+    			}
+    		}
+        return -1;
     }
 }
