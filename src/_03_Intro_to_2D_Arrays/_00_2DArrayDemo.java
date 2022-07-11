@@ -1,5 +1,7 @@
 package _03_Intro_to_2D_Arrays;
 
+import java.util.ArrayList;
+
 public class _00_2DArrayDemo {
     public static void main(String[] args) {
         /* A two-dimensional array is simply an array of arrays.
@@ -24,6 +26,33 @@ public class _00_2DArrayDemo {
          */
 
         // array2d is an array of an array of ints. Or a 2D array.
+    	
+        	String[][] test2 = new String[2][4];
+        	
+        	 ArrayList <String> m = new ArrayList<String>();
+        	 m.add("a");
+        	 m.add("b");
+        	 m.add("c");
+        	 m.add("d");
+        	 m.add("e");
+        	 m.add("f");
+        	 m.add("g");
+        	 m.add("e");
+        	 
+         	for(int i = 0; i < test2.length; i++) {
+         		
+         		for(int j = 0; j < test2[i].length; j++) {
+         			test2[i][j] = m.get(i);
+         		}
+         	}
+
+System.out.println(test2);        
+    	
+    	
+    	
+    	
+    	
+    	
         int[][] array2d;
 
         /*

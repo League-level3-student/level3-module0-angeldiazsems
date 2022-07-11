@@ -56,7 +56,7 @@ public class _00_1D_Array_Methods {
     		for(int i = 0;i < arr.length; i++) {
     			if(arr[i] == value) {
     				
-    			
+    			return i;
     			}
     		}
         return -1;
