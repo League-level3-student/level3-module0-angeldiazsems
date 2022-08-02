@@ -50,10 +50,35 @@ package _07_The_Wrong_Way_Cow;
 
 public class TheWrongWayCow {
 
-    public static int[] findWrongWayCow(final char[][] field) {
-        // Fill in the code to return the [col, row] coordinate position of the
-        // head (letter 'c') of the wrong way cow!
-        
-        return null;
-    }
+	public static int[] findWrongWayCow(final char[][] field) {
+		// Fill in the code to return the [col, row] coordinate position of the
+		// head (letter 'c') of the wrong way cow!
+		
+		int cow;
+		
+		for (int i = 0; i < field.length; i++) {
+			for(int j = 0; j < field[i].length; j++) {
+				int up = field[i][j-1];
+				int down = field[i][j+1];
+				int left = field[i-1][j];
+				int right = field[i+1][j];
+				
+				if(up = "c") {
+					cow  = "c";
+				}
+					
+				
+				
+			}
+		}
+
+		// find a letter c
+		// check to see what way it is facing
+		// compare it to other letter c's
+		// if its the same as the other c's then keep going until you find one that is
+		// different
+		// if it isn't the same to any other c's then its the wrongwaycow
+
+		return null;
+	}
 }
