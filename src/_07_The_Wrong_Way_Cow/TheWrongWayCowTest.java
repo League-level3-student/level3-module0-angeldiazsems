@@ -31,16 +31,18 @@ import static org.junit.Assert.*;
 /*
  * Instructions for this assignment are in TheWrongWayCow.java file
  */
-public class TheWrongWayCowTest {
 
-  // show the field
+public class TheWrongWayCowTest {
+	
+	
+	// show the field
   private static char[][] show(final char[][] field) {
+	 
     for (int i = 0; i < field.length; i++) {
       System.out.println(new String(field[i]));
     }
     return field;
   }
-  
   @Test
   public void simple() {
     final char[][] field = new char[][] {
