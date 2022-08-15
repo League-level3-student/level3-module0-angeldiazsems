@@ -61,80 +61,76 @@ public class TheWrongWayCow {
 		int south = 0;
 		int east = 0;
 		int west = 0;
-		
-		
 		String fieldvalue;
 		String fieldvalue2;
 		String coordnite;
-		String[] ss = new String[100];
-		String[] nn = new String[100];
-		String[] ee = new String[100];
-		String[] ww = new String[100];
-		
-		
+		int[] ss = new int[2];
+		int[] nn = new int[2];
+		int[] ee = new int[2];
+		int[] ww = new int[2];
+
 		
 		for (int i = 0; i < field.length; i++) {
 			for (int j = 0; j < field[i].length; j++) {
-				if (field[i][j-1] == 'c') {
-					if(field[i][j-3] == 'w') {
-						fieldvalue = String.valueOf(i);
-						fieldvalue2 = String.valueOf(j-1);
-						coordnite = ""+fieldvalue+", "+fieldvalue2+" ";
-						ss = new String[100];
-						ss[south] = coordnite;
-						south++;
-						
+				if(field[i][j] == 'c') {
+				if(j<field[i].length-2) {
+					if(field[i][j+1] == 'o') {
+						if(field[i][j+2] == 'w') {
+						ww[0] = j;
+						ww[1] = i;
+						west++;
+						}
 					}
 				}
-				if (field[i][j+1] == 'c') {
-					if(field[i][j+3] == 'w') {
-						fieldvalue = String.valueOf(i);
-						fieldvalue2 = String.valueOf(j+1);
-						coordnite = ""+fieldvalue+", "+fieldvalue2+" ";
-						nn = new String[100];
-						nn[north] = coordnite;
-						north++;
-					}
-				}
-				if (field[i-1][j] == 'c') {
-					if(field[i-3][j] == 'w') {
-						 fieldvalue = String.valueOf(i-1);
-						 fieldvalue2 = String.valueOf(j);
-						 coordnite = ""+fieldvalue+", "+fieldvalue2+" ";
-						ee[east] = coordnite;
+				if(j>1) {
+					if(field[i][j-1] == 'o')
+						if(field[i][j-2] == 'w') {
+						ee[0] = j;
+						ee[1] = i;
 						east++;
 					}
 				}
-				if (field[i+1][j] == 'c') {
-					if(field[i+3][j] == 'w') {
-						 fieldvalue = String.valueOf(i+1);
-						 fieldvalue2 = String.valueOf(j);
-						 coordnite = ""+fieldvalue+", "+fieldvalue2+" ";
-						 ww = new String[100];
-						ww[west] = coordnite;
-						west++;
+				}
+				if(i<field.length-2) {
+					if(field[i+1][j] == 'o') {
+						if(field[i+2][j] == 'w') {
+						nn[0] = j;
+						nn[1] = i;
+						north++;
+					}
 					}
 				}
-		
-
-				
+				if(i>1) {
+					if(field[i-1][j] == 'o') {
+						if(field[i-2][j] == 'w') {
+						ss[0] = j;
+						ss[1] = i;
+						south++;
+					}
+			}
+				}
 			}
 		}
 		System.out.println("**************************************************");
 		if(south == 1) {
 			System.out.println(ss);
+			return ss;
 		}
 		if(north == 1) {
 			System.out.println(nn);
+			return nn;
 		}
 		if(east == 1) {
 			System.out.println(ee);
+			return ee;
 		}
 		if(west == 1) {
 			System.out.println(ww);
+			return ww;
 		}
-		
-		
-		return null;
-	}
-	}
+		else {
+			return null;
+			}
+		}
+		}
+	
